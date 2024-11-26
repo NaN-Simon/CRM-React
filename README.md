@@ -8,7 +8,19 @@
 
 ```npm install -D tailwindcss postcss autoprefixer```
 
+```config changes```
+
 ```npx tailwindcss init```
+
+3. Install [Shadcn](https://ui.shadcn.com/docs/installation/vite)
+
+```config changes```
+
+```npm i -D @types/node```
+
+```npx shadcn@latest init```
+
+```New York, Zinc, CSS variables yes```
 
 # React + TypeScript + Vite
 
