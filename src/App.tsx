@@ -1,39 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { Button } from './components/ui/button'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+import { Routes, Route } from 'react-router-dom';
+import { SidebarProvider } from "@/components/ui/sidebar"
+import Topbar from '@/scenes/global/TopBar';
+import AppSidebar from "@/components/ui/appSidebar"
+import Dashboard from '@/scenes/dashboard';
+import Bar from '@/scenes/bar';
+import Contacts from '@/scenes/contacts';
+import Geography from '@/scenes/geography';
+import Invoices from '@/scenes/invoices';
+import Line from '@/scenes/line';
+import Pie from '@/scenes/pie';
+import Team from '@/scenes/team';
+import Faq from '@/scenes/faq';
+import Calendar from '@/scenes/calendar';
+import Form from '@/scenes/form';
+const App = () => {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">
-        Привет мир!
-      </h1>
-      <Button>Click me</Button>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className='app'>
+      <SidebarProvider>
+        <AppSidebar />
+        <main className='content'>
+          {/* <SidebarTrigger /> */}
+          <Topbar />
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/contacts" element={<Contacts />} />
+            <Route path="/invoices" element={<Invoices />} />
+            <Route path="/form" element={<Form />} />
+            <Route path="/bar" element={<Bar />} />
+            <Route path="/pie" element={<Pie />} />
+            <Route path="/line" element={<Line />} />
+            <Route path="/faq" element={<Faq />} />
+            <Route path="/calendar" element={<Calendar />} />
+            <Route path="/geography" element={<Geography />} />
+          </Routes>
+        </main>
+      </SidebarProvider>
+    </div>
   )
 }
 
