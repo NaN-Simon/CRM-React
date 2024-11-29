@@ -11,7 +11,6 @@ import {
   Calendar,
   Globe
 } from "lucide-react"
-
 import {
   Sidebar,
   SidebarContent,
@@ -24,7 +23,7 @@ import {
   SidebarMenuItem,
   SidebarHeader,
 } from "@/components/ui/sidebar"
-
+import avatar from '/img/avatar.png'
 const items = [
   {
     title: "Home",
@@ -86,7 +85,31 @@ const items = [
 const AppSidebar = () => {
   return (
     <Sidebar>
-      <SidebarHeader />
+      <SidebarHeader >
+
+        <div className="mb-3">
+          <div className="flex justify-center items-center">
+            <img
+              className="rounded-full"
+              alt="profile-user"
+              width="100px"
+              height="100px"
+              src={avatar}
+            />
+          </div>
+          <div className="text-center">
+            <h2
+              className="font-bold text-grey-100 mt-3"
+            >
+              NaN-Simon
+            </h2>
+            <h5 className="font-semibold text-green-200"  >
+              Admin
+            </h5>
+          </div>
+        </div>
+
+      </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>Application</SidebarGroupLabel>

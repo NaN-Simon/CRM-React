@@ -1,4 +1,4 @@
-import { tokens } from "../theme";
+// import { tokens } from "../theme";
 
 export const mockDataTeam = [
   {
@@ -69,9 +69,41 @@ export const mockDataTeam = [
     id: 9,
     name: "Harvey Roxie",
     email: "harveyroxie@gmail.com",
-    age: 65,
+    age: 45,
     phone: "(444)555-6239",
     access: "admin",
+  },
+  {
+    id: 10,
+    name: "Gonzales Carl",
+    email: "gonzalescarl@gmail.com",
+    age: 65,
+    phone: "(333)555-6666",
+    access: "manager",
+  },
+  {
+    id: 11,
+    name: "Hanson Johnny",
+    email: "hansonjohnny@gmail.com",
+    age: 34,
+    phone: "(444)666-7777",
+    access: "manager",
+  },
+  {
+    id: 12,
+    name: "Meyer Scott",
+    email: "meyerscott@gmail.com",
+    age: 64,
+    phone: "(555)777-8888",
+    access: "manager",
+  },
+  {
+    id: 13,
+    name: "Martin Thomas",
+    email: "martinthomas@gmail.com",
+    age: 21,
+    phone: "(666)888-9999",
+    access: "user",
   },
 ];
 
@@ -433,7 +465,8 @@ export const mockPieData = [
 export const mockLineData = [
   {
     id: "japan",
-    color: tokens("dark").greenAccent[500],
+    // color: tokens("dark").greenAccent[500],
+    color: "#4cceac",
     data: [
       {
         x: "plane",
@@ -487,7 +520,8 @@ export const mockLineData = [
   },
   {
     id: "france",
-    color: tokens("dark").blueAccent[300],
+    // color: tokens("dark").blueAccent[300],
+    color: "#a4a9fc",
     data: [
       {
         x: "plane",
@@ -541,7 +575,8 @@ export const mockLineData = [
   },
   {
     id: "us",
-    color: tokens("dark").redAccent[200],
+    // color: tokens("dark").redAccent[200],
+    color: "#f1b9b7",
     data: [
       {
         x: "plane",
