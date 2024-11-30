@@ -14,6 +14,7 @@ import Team from '@/scenes/team';
 import Faq from '@/scenes/faq';
 import Calendar from '@/scenes/calendar';
 import Form from '@/scenes/form';
+import { Toaster } from "@/components/ui/sonner"
 const App = () => {
   return (
     <div className='app'>
@@ -35,6 +36,7 @@ const App = () => {
             <Route path="/calendar" element={<Calendar />} />
             <Route path="/geography" element={<Geography />} />
           </Routes>
+          <Toaster />
         </main>
       </SidebarProvider>
     </div>
